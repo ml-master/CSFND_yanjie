@@ -222,8 +222,6 @@ def dataset_filter(dataset_name, data_type):
     elif dataset_name == 'twitter':
         text_lists, image_lists, labels, text_image_ids = get_twitter_matrix(data_type)
 
-    elif dataset_name == 'gossipcop_origin':
-        text_lists,image_lists,labels,text_image_ids = get_gossipcop_matrix(data_type,False)
     elif dataset_name == 'gossipcop_glm':
         text_lists,image_lists,labels,text_image_ids = get_gossipcop_matrix(data_type,True)
     else:

@@ -19,13 +19,6 @@ gossipcop_glm: # english dataset 加载ML 课程的数据集
     fine_tune_vgg: False
     token_length: 256
     learning_rate: 0.0005
-gossipcop_origin: # english dataset 加载ML 课程的数据集
-    bert_model: ./model/bert_base_uncased
-    vgg_model: vgg19
-    fine_tune_bert: False
-    fine_tune_vgg: False
-    token_length: 500
-    learning_rate: 0.0005
 
 flat_dim_t: 768  # 25*768
 bert_dim_t: 768

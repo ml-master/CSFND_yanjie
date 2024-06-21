@@ -37,7 +37,8 @@ For the original data, you can download from these links.
 - Weibo & Twitter:    [dataset in MRML](https://github.com/plw-study/MRML)
     
 - Gossipcop:    [Gossipcop-LLM](https://github.com/junyachen/Data-examples?tab=readme-ov-file)
-
+   - In this mode, we use the ```gossipcop_v3-1_style_based_fake.json```
+   - run the **data_process.ipynb**, then you can get the corresponding **trian / test** data
 
 ## Pre-trained Model
 If you cannot download it online, please download the corresponding pre-trained model through these links.
@@ -68,9 +69,11 @@ PYTHONUNBUFFERED=1 CUDA_VISIBLE_DEVICES=0 nohup python run.py --dataset=gossipco
 ```
 
 ## Results
-the table for there
 
-Ablation study
+### Main Results
+![main results](image-1.png)
+
+### Ablation Study
 1. w/o UNSPR
    1. Delete all unsupervised learning modules used
    2. ```--unspr=False --multicls=False --agg=True --avg=False```
@@ -84,7 +87,7 @@ Ablation study
    1. Use the average value to replace the context information aggregation module that uses attention
    2. ```--unspr=True --multicls=True --agg=False --avg=True```
 
-
+![ablation study](image-2.png)
 
 ```
 PYTHONUNBUFFERED=1 CUDA_VISIBLE_DEVICES=0 nohup python run.py --dataset=gossipcop_glm --unspr=False --multicls=False --agg=True --avg=False > gossipcop_glm_train_wo_UNSPR.log 2>&1 &

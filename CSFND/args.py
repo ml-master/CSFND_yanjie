@@ -12,13 +12,12 @@ def str2bool(v):
 
 def parse_args():
     
-
     
     parser = argparse.ArgumentParser(description='Fake News Detection with Clustering')
 
     # Dataset parameters
-    # weibo twitter gossipcop_origin gossipcop_glm
-    parser.add_argument('--dataset', default='gossipcop_origin', type=str,
+    # weibo twitterg ossipcop_glm
+    parser.add_argument('--dataset', default='ossipcop_glm', type=str,
                         help='dataset name')
     parser.add_argument('--option-file', default='./options.yaml',
                         help='options file in yaml.')
