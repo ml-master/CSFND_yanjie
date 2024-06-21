@@ -1,0 +1,8 @@
+gossipcop_glm_CLU17_lambdaClu0.20_lambdaTri0.60_mlp     |0.9047 & 0.7892 & 0.8430 & 0.9384 & 0.9459 & 0.9779 & 0.9617 & 0.9384
+============================ab expr==================================
+gossipcop_glm_CLU17_lambdaClu0.20_lambdaTri0.60_UNSPRTrue_MultiCLSTrue_AGGFalse_AVGTrue_mlp     |0.8903 & 0.8317 & 0.8600 & 0.9432 & 0.9561 & 0.9728 & 0.9644 & 0.9432
+gossipcop_glm_CLU17_lambdaClu0.20_lambdaTri0.60_UNSPRFalse_MultiCLSFalse_AGGTrue_AVGFalse_mlp     |0.8988 & 0.8762 & 0.8874 & 0.9534 & 0.9674 & 0.9738 & 0.9706 & 0.9534
+gossipcop_glm_CLU17_lambdaClu0.20_lambdaTri0.60_UNSPRTrue_MultiCLSFalse_AGGTrue_AVGFalse_mlp     |0.9016 & 0.8685 & 0.8847 & 0.9526 & 0.9654 & 0.9749 & 0.9701 & 0.9526
+gossipcop_glm_CLU17_lambdaClu0.20_lambdaTri0.60_UNSPRTrue_MultiCLSTrue_AGGFalse_AVGFalse_mlp     |0.9213 & 0.8375 & 0.8774 & 0.9509 & 0.9579 & 0.9810 & 0.9693 & 0.9509
+========= CSFND PAPER Version==================
+gossipcop_glm_CLU17_lambdaClu0.20_lambdaTri0.60_UNSPRTrue_MultiCLSTrue_AGGTrue_AVGFalse_mlp     |0.9219 & 0.8221 & 0.8691 & 0.9481 & 0.9541 & 0.9815 & 0.9676 & 0.9481
