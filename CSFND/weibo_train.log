@@ -1,0 +1,77 @@
+===> start training at:  0518-162553
+===> process weibo data...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 3748/3748 [05:07<00:00, 12.17it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 3783/3783 [04:48<00:00, 13.10it/s]
+    load weibo 6154  train data from files, include 3347 fake and 2807 real news.
+===> process weibo data...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [02:48<00:00,  5.93it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 996/996 [02:44<00:00,  6.04it/s]
+    load weibo 1699  test data from files, include 864 fake and 835 real news.
+===> cluster text and image items and get the cluster pseudo-label.
+We strongly recommend passing in an `attention_mask` since your input_ids may be padded. See https://huggingface.co/docs/transformers/troubleshooting#incorrect-output-when-padding-tokens-arent-masked.
+===> perform the Unsupervised context learning to get the context features.
+     epoch 0 | loss 92.979995, text 46.827804 image 46.152192 |.
+     epoch 1 | loss 92.312754, text 46.240377 image 46.072377 |.
+     epoch 2 | loss 92.990428, text 46.808232 image 46.182196 |.
+     epoch 3 | loss 91.599434, text 46.636060 image 44.963373 |.
+     epoch 4 | loss 90.925271, text 46.483299 image 44.441971 |.
+     epoch 5 | loss 91.289829, text 45.843530 image 45.446299 |.
+     epoch 6 | loss 90.068932, text 45.986738 image 44.082194 |.
+     epoch 7 | loss 90.054327, text 46.283602 image 43.770725 |.
+     epoch 8 | loss 91.916415, text 46.377713 image 45.538701 |.
+     epoch 9 | loss 92.711762, text 47.572695 image 45.139067 |.
+     epoch 10| loss 399.729285, text 221.995574 image 177.733710 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 11| loss 342.527957, text 174.404897 image 168.123060 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 12| loss 324.018985, text 159.244304 image 164.774682 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 13| loss 312.612266, text 147.710072 image 164.902194 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 14| loss 294.651088, text 143.142332 image 151.508757 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 15| loss 280.933334, text 134.162731 image 146.770603 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 16| loss 271.943799, text 130.613100 image 141.330699 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 17| loss 262.870060, text 128.731407 image 134.138653 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 18| loss 261.781538, text 125.980328 image 135.801209 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 19| loss 260.652612, text 123.167672 image 137.484940 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 20| loss 249.756397, text 121.472193 image 128.284203 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 21| loss 240.045486, text 111.342071 image 128.703414 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 22| loss 240.625918, text 114.194335 image 126.431584 |a larger loss, continue.
+     epoch 23| loss 232.454533, text 111.436986 image 121.017546 |a lower loss, save model to: ./weibo_bs32_Clu17_unsupervised.pt
+     epoch 24| loss 242.095389, text 114.240213 image 127.855175 |a larger loss, continue.
+     epoch 25| loss 249.895187, text 115.654037 image 134.241149 |a larger loss, continue.
+     epoch 26| loss 238.891770, text 114.980552 image 123.911218 |a larger loss, continue.
+     epoch 27| loss 248.248340, text 113.924924 image 134.323415 |a larger loss, continue.
+     epoch 28| loss 238.144483, text 112.152002 image 125.992481 |a larger loss, continue.
+     epoch 29| loss 240.715894, text 111.887165 image 128.828728 |a larger loss, continue.
+     epoch 30| loss 241.193217, text 115.145746 image 126.047471 |a larger loss, continue.
+     epoch 31| loss 240.920413, text 113.369449 image 127.550965 |a larger loss, continue.
+     epoch 32| loss 244.176924, text 114.843001 image 129.333922 |a larger loss, continue.
+     epoch 33| loss 236.338492, text 111.039491 image 125.299000 |a larger loss, continue.
+early stop with patience 10 at epoch  23
+===> training the main model.
+    => select the primary modality: text
+  Epoch 00| train loss 291.446382, con 59.747821, intra 107.941805, pred 123.756751, acc 0.736534|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.736471
+  Epoch 01| train loss 213.231452, con 43.879310, intra 63.337170, pred 106.014968, acc 0.855492|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.702353
+  Epoch 02| train loss 174.681329, con 35.658439, intra 37.905082, pred 101.117806, acc 0.865745|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.718824
+  Epoch 03| train loss 146.588916, con 27.243884, intra 27.462969, pred 91.882061, acc 0.899430|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.724706
+  Epoch 04| train loss 125.752581, con 23.744214, intra 20.189505, pred 81.818861, acc 0.912937|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.847647
+  Epoch 05| train loss 107.761829, con 18.059821, intra 16.380958, pred 73.321049, acc 0.911473|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.822941
+  Epoch 06| train loss 91.911458, con 16.151510, intra 13.366458, pred 62.393489, acc 0.920260|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.812941
+  Epoch 07| train loss 90.684912, con 15.906297, intra 12.369362, pred 62.409253, acc 0.929373|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.830588
+  Epoch 08| train loss 77.086097, con 12.237019, intra 10.839575, pred 54.009502, acc 0.934093|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.811176
+  Epoch 09| train loss 74.681167, con 12.405544, intra 9.965141, pred 52.310481, acc 0.936859|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.847059
+  Epoch 10| train loss 83.277773, con 14.333810, intra 10.298266, pred 58.645696, acc 0.922213|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.848235
+  Epoch 11| train loss 70.714888, con 13.192914, intra 8.434286, pred 49.087687, acc 0.942392|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.846471
+  Epoch 12| train loss 63.329285, con 10.490428, intra 7.646282, pred 45.192574, acc 0.952644|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.864118
+  Epoch 13| train loss 57.379452, con 8.860418, intra 7.508681, pred 41.010352, acc 0.944182|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.825294
+  Epoch 14| train loss 62.764776, con 10.819666, intra 7.803846, pred 44.141264, acc 0.959642|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.851176
+  Epoch 15| train loss 56.756856, con 8.464671, intra 7.296168, pred 40.996016, acc 0.958828|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.784118
+  Epoch 16| train loss 42.707746, con 7.214100, intra 5.425563, pred 30.068083, acc 0.961758|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.831765
+  Epoch 17| train loss 41.619235, con 6.012210, intra 5.415017, pred 30.192008, acc 0.948902|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.848235
+  Epoch 18| train loss 41.802708, con 6.966493, intra 4.958262, pred 29.877952, acc 0.972335|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.806471
+  Epoch 19| train loss 41.766630, con 6.333610, intra 5.251929, pred 30.181090, acc 0.952482|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.841176
+  Epoch 20| train loss 43.343196, con 7.410099, intra 5.333503, pred 30.599594, acc 0.945159|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.800588
+  Epoch 21| train loss 33.836596, con 5.115953, intra 4.432076, pred 24.288567, acc 0.977217|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.859412
+  Epoch 22| train loss 37.717855, con 5.391628, intra 4.975195, pred 27.351031, acc 0.981286|valid loss 0.000000, con 0.000000, intra 0.000000, pred 0.000000, acc 0.858235
+  training stop in epoch 12.
+  the best model had been saved to  ./FinalModel_weibo_clu17_lClu0.2_lTri0.6.pt
+===> construct multiple binary classifiers to detect fake news within each news cluster.
+--- overall fake pre 0.863636 recal 0.857639 f1 0.860627 acc 0.858740|overall real pre 0.853746 recal 0.859880 f1 0.856802 acc 0.858740|mlp       
+===> final test results: fake pre 0.8636 recall 0.8576 f1 0.8606 acc 0.8587.

@@ -9,7 +9,6 @@ CSFND/model/
 
 # 忽略输出结果 .pt
 CSFND/*.pt
-CSFND/*.log
 
 # 忽略编译文件
 CSFND/__pycache__/

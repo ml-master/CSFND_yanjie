@@ -1,0 +1,49 @@
+nohup: ignoring input
+the ab hyperparameters UNSPR:False_MultiCLS:False_AGG:True_AVG:False
+===> start training at:  0620-104352
+===> process gossipcop_glm data...
+    load gossipcop_glm 9865  train data from files, include 2198 fake and 7667 real news.
+===> process gossipcop_glm data...
+    load gossipcop_glm 2466  test data from files, include 517 fake and 1949 real news.
+===> cluster text and image items and get the cluster pseudo-label.
+===> perform the Unsupervised context learning to get the context features.
+Some weights of the model checkpoint at ./model/bert_base_uncased were not used when initializing BertModel: ['cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+     load unsupervised model that trained success.
+===> training the main model.
+Some weights of the model checkpoint at ./model/bert_base_uncased were not used when initializing BertModel: ['cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+    => select the primary modality: text
+  Epoch 00| train loss 43.681257, con 57.725170, intra 104.837189, pred 43.681257, acc 0.872781|valid loss 70.994812, con 31.404175, intra 29.341454, pred 10.249180, acc 0.931901
+  Epoch 01| train loss 40.986171, con 110.746941, intra 126.326393, pred 40.986171, acc 0.942275|valid loss 90.867844, con 46.446625, intra 34.064754, pred 10.356462, acc 0.916498
+  Epoch 02| train loss 40.287440, con 124.248215, intra 129.450548, pred 40.287440, acc 0.960333|valid loss 91.336815, con 47.168324, intra 33.392685, pred 10.775805, acc 0.926632
+  Epoch 03| train loss 39.367285, con 134.406140, intra 130.052264, pred 39.367285, acc 0.970884|valid loss 95.024078, con 50.497601, intra 34.369324, pred 10.157159, acc 0.935549
+  Epoch 04| train loss 39.873887, con 153.709516, intra 133.482393, pred 39.873887, acc 0.970884|valid loss 100.286789, con 56.105282, intra 34.070656, pred 10.110846, acc 0.942846
+  Epoch 05| train loss 37.665729, con 137.445804, intra 125.073197, pred 37.665729, acc 0.975753|valid loss 96.125290, con 54.219780, intra 31.782772, pred 10.122748, acc 0.939197
+  Epoch 06| train loss 37.584486, con 134.306807, intra 122.775333, pred 37.584486, acc 0.978594|valid loss 87.115471, con 46.913368, intra 29.978453, pred 10.223651, acc 0.929874
+  Epoch 07| train loss 36.537283, con 125.473002, intra 116.585927, pred 36.537283, acc 0.979405|valid loss 96.759262, con 55.157295, intra 31.376734, pred 10.225232, acc 0.928658
+  Epoch 08| train loss 38.285979, con 141.820924, intra 119.197075, pred 38.285979, acc 0.973116|valid loss 94.237282, con 54.621983, intra 29.511848, pred 10.103437, acc 0.942035
+  Epoch 09| train loss 36.021111, con 148.220684, intra 112.236135, pred 36.021111, acc 0.978594|valid loss 98.704567, con 57.992489, intra 30.590305, pred 10.121762, acc 0.940819
+  Epoch 10| train loss 35.014684, con 146.474949, intra 106.133390, pred 35.014684, acc 0.979000|valid loss 93.934044, con 55.366863, intra 28.486145, pred 10.081039, acc 0.945278
+  Epoch 11| train loss 36.871836, con 124.814724, intra 108.928860, pred 36.871836, acc 0.983261|valid loss 86.204651, con 49.311905, intra 26.840204, pred 10.052532, acc 0.947304
+  Epoch 12| train loss 34.864495, con 135.697442, intra 102.172679, pred 34.864495, acc 0.982246|valid loss 93.095322, con 55.466877, intra 27.599720, pred 10.028732, acc 0.949737
+  Epoch 13| train loss 33.219068, con 111.310786, intra 96.549957, pred 33.219068, acc 0.986609|valid loss 95.810471, con 56.306175, intra 29.469154, pred 10.035145, acc 0.950142
+  Epoch 14| train loss 33.719580, con 110.151320, intra 95.944474, pred 33.719580, acc 0.986609|valid loss 95.179871, con 57.739285, intra 27.428226, pred 10.012370, acc 0.951763
+  Epoch 15| train loss 33.254290, con 119.004234, intra 92.016224, pred 33.254290, acc 0.985188|valid loss 82.625984, con 47.170643, intra 25.398039, pred 10.057298, acc 0.946494
+  Epoch 16| train loss 33.782735, con 122.784549, intra 90.916145, pred 33.782735, acc 0.984174|valid loss 100.142326, con 63.340614, intra 26.706982, pred 10.094727, acc 0.942440
+  Epoch 17| train loss 31.681124, con 122.130756, intra 84.458747, pred 31.681124, acc 0.986609|valid loss 103.180977, con 66.416069, intra 26.691113, pred 10.073792, acc 0.946494
+  Epoch 18| train loss 34.749521, con 157.586507, intra 89.181097, pred 34.749521, acc 0.985493|valid loss 94.766991, con 60.586266, intra 24.108063, pred 10.072657, acc 0.945683
+  Epoch 19| train loss 26.628167, con 104.912808, intra 67.876433, pred 26.628167, acc 0.987217|valid loss 88.403137, con 54.910854, intra 23.381845, pred 10.110442, acc 0.941630
+  Epoch 20| train loss 31.185632, con 104.879630, intra 76.907523, pred 31.185632, acc 0.986609|valid loss 83.097176, con 51.492870, intra 21.349596, pred 10.254715, acc 0.926226
+  Epoch 21| train loss 37.803241, con 114.282713, intra 83.888835, pred 37.803241, acc 0.970884|valid loss 82.070389, con 50.110405, intra 21.126331, pred 10.833645, acc 0.924199
+  Epoch 22| train loss 36.764287, con 114.949444, intra 80.988619, pred 36.764287, acc 0.971797|valid loss 81.457825, con 49.753384, intra 20.860737, pred 10.843688, acc 0.922173
+  Epoch 23| train loss 37.313064, con 118.347404, intra 82.134431, pred 37.313064, acc 0.970072|valid loss 81.463768, con 49.686642, intra 20.933807, pred 10.843304, acc 0.923389
+  Epoch 24| train loss 37.239723, con 125.092815, intra 82.814510, pred 37.239723, acc 0.973826|valid loss 81.536392, con 49.657021, intra 21.040773, pred 10.838593, acc 0.923389
+  training stop in epoch 14.
+  the best model had been saved to  ./FinalModel_gossipcop_glm_clu17_lClu0.2_lTri0.6_UNSPRFalse_MultiCLSFalse_AGGTrue_AVGFalse.pt
+===> construct multiple binary classifiers to detect fake news within each news cluster.
+use single classifier! 
+--- overall fake pre 0.898810 recal 0.876209 f1 0.887365 acc 0.953366|overall real pre 0.967380 recal 0.973833 f1 0.970596 acc 0.953366|mlp       
+===> final test results: fake pre 0.8988 recall 0.8762 f1 0.8874 acc 0.9534.
